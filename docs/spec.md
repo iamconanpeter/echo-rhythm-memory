@@ -1,22 +1,26 @@
-# Echo Rhythm Memory — Spec (Plan-Mode via codex CLI)
+# Echo Rhythm Memory - Spec (codex plan-mode)
+Q&A (assumed):
+- Core fantasy: Audio-visual memory training with a rhythmic pulse
+- 10-second hook: Colorful rings pulse with distinct tones — player must remember and replay the sequence
+- Daily/weekly loop: Streak-based progression with daily seeded sequences and unlockable echo modes
+- Session length: 30s–2m bursts per round
+- Skill vs luck: Skill-based (memory + timing), no RNG in scoring; seed-based daily patterns for replayability
+- Fail-state fairness: "Listen again" token available once per round to replay the sequence
+- Difficulty ramp: Sequence length increases each round (2→3→4→5+ taps); echo mode adds reverse replay
+- Distinctive mechanic: Bidirectional recall (forward + echo reverse) doubles cognitive depth vs. standard Simon clones
+- Art/animation scope: Minimal — colored rings with pulse animation, soft gradient background
+- Audio/feedback plan: Distinct tones per ring, haptic feedback on tap, soft chime on success
+- Monetization-safe design: Optional ad after session complete; no dark patterns; premium feel without pay-to-win
+- Technical constraints: Target API 34, minSdk 26; 60fps ring animations; <50MB APK size
+USP: "Remember the beat — build the echo."
 
-ConceptRank: 21. Slug: echo-rhythm-memory.
-Codex CLI evidence: `codex exec` invoked; plan artifacts written to docs/.
+## Differentiation
+- 3 differentiators: (1) Echo/reverse mode doubles cognitive depth, (2) Daily seeded sequences for endless replay, (3) Listen-again token reduces frustration
 
-Q&A Discovery (assumptions derived from iOS trend + pipeline):
-1. Hook: "Tap the ring back — then try it in reverse." 10s.
-2. Loop: Daily seed + echo twist + listen-again token.
-3. Session: 30s (quick) / 2m (mastery) / 5m (daily seed).
-4. Skill>luck: deterministic seeds, fixed audio timing.
-5. Fairness: one retry token, no time penalty on wrong tap.
-6. Ramp: 3-step onboarding, then linear +1/round.
-7. USP: Bidirectional recall vs one-way Simon clones.
-8. Art: 4 colored ring textures + tone palette — small.
-9. Audio: 4 distinct tones + subtle feedback click.
-10. Mono-safe, no dark patterns.
+## Retention
+- 3 retention hooks: (1) Streak counter with daily reset, (2) Unlock echo/skip variants at milestones, (3) Best score leaderboard
 
-Differentiation: (1) Echo reverse mode, (2) Daily deterministic seeds, (3) Streak-safe listen-again.
-Retention: meta progression (sequence master), streak-safe return, variable echo twist.
-Quality bars: juice/feedback, readability, smoothness.
-
-MVP scope: core ring grid (4/6/8 steps), forward replay, echo reverse unlock, simple scoring, daily seed. Post-MVP: custom seeds, audio customization, leaderboard.
+## Quality bars
+- Juice/feedback: Satisfying tone chime + ring pulse animation on correct tap
+- Readability: Large colored rings with clear labels (1–8), high contrast
+- Smoothness: 60fps animations, <100ms input latency
